@@ -1,0 +1,1 @@
+export const PADDING_DEFAULT = '15px'
