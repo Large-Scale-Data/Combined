@@ -2,7 +2,7 @@ import { Main, TableComponent } from './components/Table/Main';
 import { ViewPortProvider } from './app/context'
 import './App.css';
 import { DynamicHeader } from './components/DynamicHeader';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SearchBar } from './components/SearchBar/Main';
 import { AllergiesContainer } from './components/AllergiesContainer/Main';
 import { FilterCountries } from './components/FilterCountries/Main';
@@ -15,12 +15,17 @@ function App() {
   const allergies = [...new Set(Data.map((Val) => Val.allergy))];
   const countries = [...new Set(Data.map((Val) => Val.region))];
   
-  // refreshList = () => {
-  //   axios
-  //     .get("/api/todos/")
-  //     .then((res) => this.setState({ todoList: res.data }))
-  //     .catch((err) => console.log(err));
-  // };
+  // useEffect(() =>{
+  //   let data ;
+  //       axios.get('http://localhost:8000/wel/')
+  //       .then(res => {
+  //           data = res.data;
+  //           setData({
+  //               Data : data    
+  //           });
+  //       })
+  //       .catch(err => {})
+  // })
   
   return (
     <ViewPortProvider>

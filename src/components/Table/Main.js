@@ -9,7 +9,7 @@ export const TableComponent = ({ data, countires }) => {
     </tr>
     </thead>
     <tbody>
-    {/* { console.log(data) } */}
+    { console.log(data) }
     {data.map((val, key) => {
         return (
           <tr key={key} style={{color:'black'}}>
