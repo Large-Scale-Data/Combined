@@ -12,23 +12,25 @@ import { Data } from './Data';
 
 function App() {
   const [data, setData] = useState(Data);
-  const allergies = [...new Set(Data.map((Val) => Val.allergy))];
-  const countries = [...new Set(Data.map((Val) => Val.region))];
-  
+  // const [data, setData] = useState({Data:[]});
   // useEffect(() =>{
-  //   let data ;
-  //       axios.get('http://localhost:8000/wel/')
+  //   let x ;
+  //       axios.get('http://localhost:8000/admin/')
   //       .then(res => {
-  //           data = res.data;
+  //           x = res.x;
   //           setData({
-  //               Data : data    
+  //               Data : x    
   //           });
   //       })
   //       .catch(err => {})
   // })
+
+  const allergies = [...new Set(Data.map((Val) => Val.allergy))];
+  const countries = [...new Set(Data.map((Val) => Val.region))];
   
   return (
     <ViewPortProvider>
+      {console.log(data)}
     <DynamicHeader 
       title={'Food Products Sold In the US, MX and UK'}
       backgroundColor='lightblue'
